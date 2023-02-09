@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>bootstrap</title>
+
+        <!-- bootstrap cdn  -->
+        <link rel="stylesheet" href="css/bootstrap.css" />
+
+        <!-- custom css  -->
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/media_query.css" />
+        <link rel="stylesheet" href="icons/bootstrap-icons.css" />
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg bg-gradient">
+                <div class="container-md">
+                    <a class="navbar-brand" href="index.html"
+                        ><img src="images/logo.png" class="w-75" alt=""
+                    /></a>
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarTogglerDemo03"
+                        aria-controls="navbarTogglerDemo03"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div
+                        class="collapse navbar-collapse"
+                        id="navbarTogglerDemo03"
+                    >
+                        <ul class="navbar-nav ms-auto mb-lg-0">
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link active text-white"
+                                    aria-current="page"
+                                    href="#"
+                                    >Home</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link"
+                                    href="pages/about_us/about_us.html"
+                                    >About us</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link"
+                                    href="pages/portfolio/portfolio.html"
+                                    >Portfolio</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link"
+                                    href="pages/contact_us/contact_us.html"
+                                    >Contact</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <h2 class="display-6 text-center py-3">Form Validation</h2>
+            <section class="container bg-success-subtle rounded">
+                <form class="row g-3 p-4 needs-validation" novalidate>
+                    <div class="col-lg-4 col-md-6 position-relative">
+                        <label for="f_name" class="form-label"
+                            >First name</label
+                        >
+                        <input
+                            type="text"
+                            class="form-control f_name"
+                            id="f_name"
+                            name="f_name"
+                            placeholder="Enter your First Name"
+                            required
+                        />
+                        <div class="valid-tooltip">Looks good!</div>
+                        <div class="invalid-tooltip">
+                            Please Enter your First Name
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 position-relative">
+                        <label for="l_name" class="form-label">Last name</label>
+                        <input
+                            type="text"
+                            class="form-control l_name"
+                            id="l_name"
+                            name="l_name"
+                            placeholder="Enter your Last Name"
+                            required
+                        />
+                        <div class="valid-tooltip">Looks good!</div>
+                        <div class="invalid-tooltip">
+                            Please Enter your Last Name
+                        </div>
+                    </div>
+                    <div class="col-lg-4 position-relative">
+                        <label for="username" class="form-label"
+                            >Username</label
+                        >
+                        <div class="input-group has-validation">
+                            <span
+                                class="input-group-text"
+                                id="validationTooltipUsernamePrepend"
+                                >@</span
+                            >
+                            <input
+                                type="text"
+                                class="form-control username"
+                                id="username"
+                                name="username"
+                                placeholder="Enter your username"
+                                aria-describedby="validationTooltipUsernamePrepend"
+                                required
+                            />
+                            <div class="valid-tooltip">Looks good!</div>
+                            <div class="invalid-tooltip">
+                                Please choose a unique and valid username.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 position-relative">
+                        <label for="email" class="form-label">Email </label>
+                        <input
+                            type="email"
+                            class="form-control email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your Email address"
+                            required
+                        />
+                        <div class="valid-tooltip">Looks good!</div>
+                        <div class="invalid-tooltip">
+                            Please Enter valid Email address
+                        </div>
+                    </div>
+                    <div class="col-md-6 position-relative">
+                        <label for="city" class="form-label">City</label>
+                        <input
+                            type="text"
+                            class="form-control city"
+                            id="city"
+                            placeholder="Enter your City"
+                            required
+                        />
+                        <div class="valid-tooltip">Looks good!</div>
+                        <div class="invalid-tooltip">
+                            Please provide a valid city.
+                        </div>
+                    </div>
+                    <div class="col-md-3 position-relative">
+                        <label for="state" class="form-label">State</label>
+                        <select
+                            class="form-select state"
+                            id="state"
+                            name="state"
+                            required
+                        >
+                            <option selected disabled value="">
+                                Choose...
+                            </option>
+                            <option selected>Dhaka</option>
+                            <option>Barishal</option>
+                            <option>Shylhet</option>
+                        </select>
+                        <div class="valid-tooltip">Looks good!</div>
+                        <div class="invalid-tooltip">
+                            Please select a valid state.
+                        </div>
+                    </div>
+                    <div class="col-md-3 position-relative">
+                        <label for="zip" class="form-label">Zip</label>
+                        <input
+                            type="number"
+                            class="form-control zip"
+                            id="zip"
+                            name="zip"
+                            placeholder="Enter Zip code"
+                            required
+                        />
+                        <div class="valid-tooltip">Looks good!</div>
+                        <div class="invalid-tooltip">
+                            Please provide a valid zip.
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-check">
+                            <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="invalidCheck"
+                                required
+                                checked
+                            />
+                            <label class="form-check-label" for="invalidCheck">
+                                Agree to terms and conditions
+                            </label>
+                            <div class="invalid-feedback">
+                                You must agree before submitting.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 mt-5">
+                        <button class="btn btn-primary" type="submit">
+                            Submit form
+                        </button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="container-md my-5">
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="col">
+                        <div class="card h-100">
+                            <img
+                                src="images/card_image_1.jpg"
+                                class="card-img-top"
+                                alt="..."
+                            />
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">
+                                    This is a wider card with supporting text
+                                    below as a natural lead-in to additional
+                                    content. This content is a little bit
+                                    longer.
+                                </p>
+                            </div>
+                            <div
+                                class="card-footer d-flex justify-content-between"
+                            >
+                                <small class="text-muted"
+                                    >Last updated 3 mins ago</small
+                                ><span class="badge text-bg-primary">35 $</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img
+                                src="images/card_image_2.jpg"
+                                class="card-img-top"
+                                alt="..."
+                            />
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">
+                                    This card has supporting text below as a
+                                    natural lead-in to additional content.
+                                </p>
+                            </div>
+                            <div
+                                class="card-footer d-flex justify-content-between"
+                            >
+                                <small class="text-muted"
+                                    >Last updated 3 mins ago</small
+                                ><span class="badge text-bg-primary">35 $</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img
+                                src="images/card_image_3.jpg"
+                                class="card-img-top"
+                                alt="..."
+                            />
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">
+                                    This is a wider card with supporting text
+                                    below as a natural lead-in to additional
+                                    content.
+                                </p>
+                            </div>
+                            <div
+                                class="card-footer d-flex justify-content-between"
+                            >
+                                <small class="text-muted"
+                                    >Last updated 3 mins ago</small
+                                ><span class="badge text-bg-primary">35 $</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- footer section start -->
+        <footer>
+            <div class="container d-flex justify-content-between py-4">
+                <div>
+                    <ul class="ps-0 mb-0">
+                        <li><a href="#">Terms and conditions</a></li>
+                        <li><a href="#">Privacy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="mb-0">
+                        <li>Follow</li>
+                        <li>
+                            <a
+                                href="https://www.facebook.com/sujonmadbor8"
+                                target="_blank"
+                                ><i class="bi bi-facebook"></i
+                            ></a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://twitter.com/sujonmadbor80"
+                                target="_blank"
+                                ><i class="bi bi-twitter"></i
+                            ></a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://www.linkedin.com/in/sujonmadbor8/"
+                                target="_blank"
+                                ><i class="bi bi-linkedin"></i
+                            ></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!-- footer section end -->
+
+        <!-- bootstrap js  -->
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>
